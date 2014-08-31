@@ -12,10 +12,7 @@ $(document).ready(function(){
 });
 
 
-
 var getPhotos = function() {
-
-//  var request = ?????
 
   var result = $.ajax({
     url: "https://api.instagram.com/v1/tags/edfringe/media/recent?access_token=493860900.1fb234f.b7fe5dee22b542ca80c8c740db3b038d&callback=callbackFunction",
@@ -27,19 +24,29 @@ var getPhotos = function() {
 
     console.log("success!")
 
+      for(var i = 0; i < 18; i++) {
+
+        console.log(result.data[i].images.thumbnail.url);
+
+     var showPhoto = function() {
+
+          var photo = $("#fringe").clone();
+
+          photo.attr('src', result.data[i].images.thumbnail.url);
+          photo.attr('id', result.data[i].images.thumbnail.url);
+
+          return photo;
+        }
 
 
-      for(var i = 0; i < 18; i++)
-
-    
-    console.log(result.data[i].images.thumbnail.url);
+      $("#photos").append(showPhoto);
+    }
   }
 
 )
 
 }
 
-//<img src= url/>
 
 
 

@@ -87,3 +87,14 @@ header p {
 	display: none;
 }
 
+#photos {
+	margin: 0px 100px 0px 100px;
+	padding: 15px 50px 50px 50px;
+
+}
+
+#photos img {
+	border: 1px solid black;
+	margin: 6px;
+
+}
