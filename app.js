@@ -20,9 +20,10 @@ var getPhotos = function() {
     cache: false,
     type: "GET",
   })
+  
   .done(function(result){
 
-    console.log("success!")
+    console.log("success!");
 
       for(var i = 0; i < 18; i++) {
 
